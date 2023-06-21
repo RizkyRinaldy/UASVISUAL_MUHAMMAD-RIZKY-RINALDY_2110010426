@@ -239,8 +239,8 @@ object Form2: TForm2
       TabOrder = 4
     end
     object edt6: TEdit
-      Left = -16
-      Top = 216
+      Left = 520
+      Top = 24
       Width = 161
       Height = 21
       TabOrder = 5
@@ -256,54 +256,31 @@ object Form2: TForm2
     end
     object edt7: TEdit
       Left = 520
-      Top = 24
+      Top = 56
       Width = 161
       Height = 21
       TabOrder = 7
     end
     object edt8: TEdit
       Left = 520
-      Top = 120
+      Top = 88
       Width = 161
       Height = 21
       TabOrder = 8
     end
     object edt9: TEdit
       Left = 520
-      Top = 152
+      Top = 120
       Width = 161
       Height = 21
       TabOrder = 9
     end
     object edt10: TEdit
       Left = 520
-      Top = 216
+      Top = 152
       Width = 161
       Height = 21
       TabOrder = 10
-    end
-    object cbb1: TComboBox
-      Left = 520
-      Top = 56
-      Width = 161
-      Height = 21
-      ItemHeight = 13
-      TabOrder = 11
-      Items.Strings = (
-        '10'
-        '11'
-        '12')
-    end
-    object cbb2: TComboBox
-      Left = 520
-      Top = 88
-      Width = 161
-      Height = 21
-      ItemHeight = 13
-      TabOrder = 12
-      Items.Strings = (
-        'IPA'
-        'IPS')
     end
     object btn1: TButton
       Left = 32
@@ -311,7 +288,7 @@ object Form2: TForm2
       Width = 105
       Height = 41
       Caption = 'BARU'
-      TabOrder = 13
+      TabOrder = 11
     end
     object btn2: TButton
       Left = 168
@@ -319,7 +296,7 @@ object Form2: TForm2
       Width = 105
       Height = 41
       Caption = 'SIMPAN'
-      TabOrder = 14
+      TabOrder = 12
     end
     object btn3: TButton
       Left = 304
@@ -327,7 +304,7 @@ object Form2: TForm2
       Width = 105
       Height = 41
       Caption = 'EDIT'
-      TabOrder = 15
+      TabOrder = 13
     end
     object btn4: TButton
       Left = 440
@@ -335,7 +312,7 @@ object Form2: TForm2
       Width = 105
       Height = 41
       Caption = 'HAPUS'
-      TabOrder = 16
+      TabOrder = 14
     end
     object btn5: TButton
       Left = 576
@@ -343,12 +320,26 @@ object Form2: TForm2
       Width = 105
       Height = 41
       Caption = 'BATAL'
+      TabOrder = 15
+    end
+    object edt11: TEdit
+      Left = 520
+      Top = 184
+      Width = 161
+      Height = 21
+      TabOrder = 16
+    end
+    object edt12: TEdit
+      Left = 520
+      Top = 216
+      Width = 161
+      Height = 21
       TabOrder = 17
     end
   end
   object dbgrd1: TDBGrid
     Left = 40
-    Top = 392
+    Top = 376
     Width = 753
     Height = 169
     TabOrder = 1
@@ -357,5 +348,29 @@ object Form2: TForm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object ds1: TDataSource
+    Left = 840
+    Top = 328
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    SQL.Strings = (
+      'select * from tabel_siswa')
+    Params = <>
+    Left = 848
+    Top = 240
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    HostName = 'localhost'
+    Port = 8111
+    Database = 'databasename'
+    User = 'root'#13#10
+    Protocol = 'mysql'
+    Left = 832
+    Top = 104
   end
 end
