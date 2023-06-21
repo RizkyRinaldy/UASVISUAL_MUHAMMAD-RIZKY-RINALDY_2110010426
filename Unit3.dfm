@@ -1,8 +1,8 @@
 object Form3: TForm3
-  Left = 457
-  Top = 175
+  Left = 447
+  Top = 187
   Width = 1044
-  Height = 570
+  Height = 571
   Caption = 'Form3'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -84,22 +84,9 @@ object Form3: TForm3
       Font.Style = []
       ParentFont = False
     end
-    object lbl6: TLabel
-      Left = 360
-      Top = 24
-      Width = 117
-      Height = 19
-      Caption = 'JENIS KELAMIN'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Times New Roman'
-      Font.Style = []
-      ParentFont = False
-    end
     object lbl7: TLabel
       Left = 360
-      Top = 56
+      Top = 24
       Width = 97
       Height = 19
       Caption = 'PENDIDIKAN'
@@ -112,7 +99,7 @@ object Form3: TForm3
     end
     object lbl8: TLabel
       Left = 360
-      Top = 88
+      Top = 56
       Width = 88
       Height = 19
       Caption = 'NO TELPON'
@@ -125,7 +112,7 @@ object Form3: TForm3
     end
     object lbl9: TLabel
       Left = 360
-      Top = 120
+      Top = 88
       Width = 89
       Height = 19
       Caption = 'PEKERJAAN'
@@ -192,21 +179,13 @@ object Form3: TForm3
       TabOrder = 6
       Text = 'edt1'
     end
-    object edt8: TEdit
-      Left = 504
-      Top = 120
-      Width = 169
-      Height = 21
-      TabOrder = 7
-      Text = 'edt1'
-    end
     object btn1: TButton
       Left = 16
       Top = 176
       Width = 97
       Height = 41
       Caption = 'BARU'
-      TabOrder = 8
+      TabOrder = 7
     end
     object btn2: TButton
       Left = 152
@@ -214,7 +193,7 @@ object Form3: TForm3
       Width = 97
       Height = 41
       Caption = 'SIMPAN'
-      TabOrder = 9
+      TabOrder = 8
     end
     object btn3: TButton
       Left = 288
@@ -222,7 +201,7 @@ object Form3: TForm3
       Width = 97
       Height = 41
       Caption = 'EDIT'
-      TabOrder = 10
+      TabOrder = 9
     end
     object btn4: TButton
       Left = 424
@@ -230,7 +209,7 @@ object Form3: TForm3
       Width = 97
       Height = 41
       Caption = 'HAPUS'
-      TabOrder = 11
+      TabOrder = 10
     end
     object btn5: TButton
       Left = 568
@@ -238,7 +217,7 @@ object Form3: TForm3
       Width = 97
       Height = 41
       Caption = 'BATAL'
-      TabOrder = 12
+      TabOrder = 11
     end
   end
   object dbgrd1: TDBGrid

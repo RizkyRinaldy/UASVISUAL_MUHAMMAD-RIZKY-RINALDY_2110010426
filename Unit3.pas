@@ -17,12 +17,10 @@ type
     edt5: TEdit;
     edt6: TEdit;
     edt7: TEdit;
-    edt8: TEdit;
     lbl2: TLabel;
     lbl3: TLabel;
     lbl4: TLabel;
     lbl5: TLabel;
-    lbl6: TLabel;
     lbl7: TLabel;
     lbl8: TLabel;
     lbl9: TLabel;

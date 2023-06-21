@@ -45,8 +45,8 @@ type
     edt11: TEdit;
     edt12: TEdit;
     ds1: TDataSource;
-    zqry1: TZQuery;
     con1: TZConnection;
+    zqry1: TZQuery;
   private
     { Private declarations }
   public
@@ -59,6 +59,8 @@ var
 implementation
 
 {$R *.dfm}
+
+
 
 
 
