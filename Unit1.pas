@@ -10,6 +10,7 @@ type
   TForm1 = class(TForm)
     btn1: TButton;
     btn2: TButton;
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -21,7 +22,16 @@ var
 
 implementation
 
+uses Unit2;
+
 {$R *.dfm}
+
+
+procedure TForm1.btn1Click(Sender: TObject);
+begin
+form2.show;
+end;
+
 
 
 end.
