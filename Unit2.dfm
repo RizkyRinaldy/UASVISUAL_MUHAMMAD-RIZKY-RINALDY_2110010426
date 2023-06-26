@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 430
-  Top = 129
+  Left = 301
+  Top = 165
   Width = 1044
   Height = 611
   Caption = 'Form2'
@@ -246,42 +246,33 @@ object Form2: TForm2
       Height = 21
       TabOrder = 5
     end
-    object dtp1: TDateTimePicker
-      Left = 160
-      Top = 184
-      Width = 161
-      Height = 21
-      Date = 45097.875412442130000000
-      Time = 45097.875412442130000000
-      TabOrder = 6
-    end
     object edt7: TEdit
       Left = 520
       Top = 56
       Width = 161
       Height = 21
-      TabOrder = 7
+      TabOrder = 6
     end
     object edt8: TEdit
       Left = 520
       Top = 88
       Width = 161
       Height = 21
-      TabOrder = 8
+      TabOrder = 7
     end
     object edt9: TEdit
       Left = 520
       Top = 120
       Width = 161
       Height = 21
-      TabOrder = 9
+      TabOrder = 8
     end
     object edt10: TEdit
       Left = 520
       Top = 152
       Width = 161
       Height = 21
-      TabOrder = 10
+      TabOrder = 9
     end
     object btn1: TButton
       Left = 32
@@ -289,7 +280,7 @@ object Form2: TForm2
       Width = 105
       Height = 41
       Caption = 'BARU'
-      TabOrder = 11
+      TabOrder = 10
       OnClick = btn1Click
     end
     object btn2: TButton
@@ -298,7 +289,7 @@ object Form2: TForm2
       Width = 105
       Height = 41
       Caption = 'SIMPAN'
-      TabOrder = 12
+      TabOrder = 11
       OnClick = btn2Click
     end
     object btn3: TButton
@@ -307,7 +298,8 @@ object Form2: TForm2
       Width = 105
       Height = 41
       Caption = 'EDIT'
-      TabOrder = 13
+      TabOrder = 12
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 440
@@ -315,7 +307,8 @@ object Form2: TForm2
       Width = 105
       Height = 41
       Caption = 'HAPUS'
-      TabOrder = 14
+      TabOrder = 13
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 576
@@ -323,20 +316,29 @@ object Form2: TForm2
       Width = 105
       Height = 41
       Caption = 'BATAL'
-      TabOrder = 15
+      TabOrder = 14
     end
     object edt11: TEdit
       Left = 520
       Top = 184
       Width = 161
       Height = 21
-      TabOrder = 16
+      TabOrder = 15
     end
     object edt12: TEdit
       Left = 520
       Top = 216
       Width = 161
       Height = 21
+      TabOrder = 16
+    end
+    object dtp1: TDateTimePicker
+      Left = 160
+      Top = 184
+      Width = 161
+      Height = 21
+      Date = 45102.640925439820000000
+      Time = 45102.640925439820000000
       TabOrder = 17
     end
   end
@@ -352,6 +354,7 @@ object Form2: TForm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object ds1: TDataSource
     DataSet = zqry1
