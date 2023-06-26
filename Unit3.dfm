@@ -225,11 +225,42 @@ object Form3: TForm3
     Top = 336
     Width = 737
     Height = 185
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 8111
+    Database = 'laporan_siswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 
+      'D:\UNISKA\Semester 4\Visual 2\UAS_Muhammad Rizky Rinaldy_2110010' +
+      '426\libmysql.dll'
+    Left = 840
+    Top = 120
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from data_ortu')
+    Params = <>
+    Left = 856
+    Top = 192
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 856
+    Top = 272
   end
 end
