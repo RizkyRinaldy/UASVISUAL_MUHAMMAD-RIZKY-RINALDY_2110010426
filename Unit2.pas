@@ -228,6 +228,62 @@ begin
   ShowMessage('Data Tidak Ada Perubahan');
   posisiawal;
 end else
+if edt2.Text = zqry1.Fields[2].AsString then
+begin
+  ShowMessage('Data Tidak Ada Perubahan');
+  posisiawal;
+end else
+if edt3.Text = zqry1.Fields[3].AsString then
+begin
+  ShowMessage('Data Tidak Ada Perubahan');
+  posisiawal;
+end else
+if edt4.Text = zqry1.Fields[4].AsString then
+begin
+  ShowMessage('Data Tidak Ada Perubahan');
+  posisiawal;
+end else
+if edt5.Text = zqry1.Fields[5].AsString then
+begin
+  ShowMessage('Data Tidak Ada Perubahan');
+  posisiawal;
+  end else
+if edt6.Text = zqry1.Fields[7].AsString then
+begin
+  ShowMessage('Data Tidak Ada Perubahan');
+  posisiawal;
+end else
+if edt7.Text = zqry1.Fields[8].AsString then
+begin
+  ShowMessage('Data Tidak Ada Perubahan');
+  posisiawal;
+end else
+if edt8.Text = zqry1.Fields[9].AsString then
+begin
+  ShowMessage('Data Tidak Ada Perubahan');
+  posisiawal;
+end else
+if edt9.Text = zqry1.Fields[10].AsString then
+begin
+  ShowMessage('Data Tidak Ada Perubahan');
+  posisiawal;
+end else
+if edt10.Text = zqry1.Fields[11].AsString then
+begin
+  ShowMessage('Data Tidak Ada Perubahan');
+  posisiawal;
+end else
+if edt11.Text = zqry1.Fields[12].AsString then
+begin
+  ShowMessage('Data Tidak Ada Perubahan');
+  posisiawal;
+end else
+if edt12.Text = zqry1.Fields[13].AsString then
+begin
+  ShowMessage('Data Tidak Ada Perubahan');
+  posisiawal;
+end else
+
 begin
   ShowMessage('Data Berhasil Di Update');
   zqry1.SQL.Clear;
@@ -239,8 +295,7 @@ begin
   zqry1.Open;
   posisiawal;
   end;
-
-    end;
+  end;
 procedure TForm2.dbgrd1CellClick(Column: TColumn);
 begin
 id:=zqry1.Fields[0].AsString;

@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 447
-  Top = 187
+  Left = 520
+  Top = 81
   Width = 1044
   Height = 571
   Caption = 'Form3'
@@ -33,25 +33,12 @@ object Form3: TForm3
     Width = 737
     Height = 233
     TabOrder = 0
-    object lbl2: TLabel
-      Left = 16
-      Top = 24
-      Width = 103
-      Height = 19
-      Caption = 'ID ORTU/WALI'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Times New Roman'
-      Font.Style = []
-      ParentFont = False
-    end
     object lbl3: TLabel
       Left = 16
-      Top = 56
-      Width = 59
+      Top = 24
+      Width = 29
       Height = 19
-      Caption = 'NIP/NIK'
+      Caption = 'NIK'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -61,7 +48,7 @@ object Form3: TForm3
     end
     object lbl4: TLabel
       Left = 16
-      Top = 88
+      Top = 56
       Width = 48
       Height = 19
       Caption = 'NAMA'
@@ -74,7 +61,7 @@ object Form3: TForm3
     end
     object lbl5: TLabel
       Left = 16
-      Top = 120
+      Top = 88
       Width = 117
       Height = 19
       Caption = 'JENIS KELAMIN'
@@ -86,8 +73,8 @@ object Form3: TForm3
       ParentFont = False
     end
     object lbl7: TLabel
-      Left = 360
-      Top = 24
+      Left = 16
+      Top = 120
       Width = 97
       Height = 19
       Caption = 'PENDIDIKAN'
@@ -100,7 +87,7 @@ object Form3: TForm3
     end
     object lbl8: TLabel
       Left = 360
-      Top = 56
+      Top = 24
       Width = 88
       Height = 19
       Caption = 'NO TELPON'
@@ -113,10 +100,23 @@ object Form3: TForm3
     end
     object lbl9: TLabel
       Left = 360
-      Top = 88
+      Top = 56
       Width = 89
       Height = 19
       Caption = 'PEKERJAAN'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+    end
+    object lbl2: TLabel
+      Left = 360
+      Top = 88
+      Width = 63
+      Height = 19
+      Caption = 'ALAMAT'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -196,6 +196,7 @@ object Form3: TForm3
       Height = 41
       Caption = 'SIMPAN'
       TabOrder = 8
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 288
@@ -204,6 +205,7 @@ object Form3: TForm3
       Height = 41
       Caption = 'EDIT'
       TabOrder = 9
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 424
@@ -234,6 +236,7 @@ object Form3: TForm3
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
