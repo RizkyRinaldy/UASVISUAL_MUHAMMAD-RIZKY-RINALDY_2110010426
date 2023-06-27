@@ -47,6 +47,9 @@ type
     con1: TZConnection;
     zqry1: TZQuery;
     dtp1: TDateTimePicker;
+    btn6: TButton;
+    btn7: TButton;
+    btn8: TButton;
     procedure posisiawal;
     procedure bersih;
     procedure FormShow(Sender: TObject);
@@ -55,6 +58,7 @@ type
     procedure btn3Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn4Click(Sender: TObject);
+    procedure btn7Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -66,6 +70,8 @@ var
   Form2: TForm2;
 
 implementation
+
+uses Unit3;
 
 {$R *.dfm}
 
@@ -292,4 +298,9 @@ begin
 end;
 
 end;
+procedure TForm2.btn7Click(Sender: TObject);
+begin
+form3.show;
+end;
+
 end.

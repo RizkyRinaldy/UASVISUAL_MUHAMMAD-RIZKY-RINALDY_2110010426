@@ -30,7 +30,7 @@ object Form2: TForm2
   object pnl1: TPanel
     Left = 40
     Top = 56
-    Width = 753
+    Width = 833
     Height = 313
     Hint = 'LAKI'
     BevelWidth = 2
@@ -341,6 +341,14 @@ object Form2: TForm2
       Time = 45102.640925439820000000
       TabOrder = 17
     end
+    object btn6: TButton
+      Left = 712
+      Top = 256
+      Width = 105
+      Height = 41
+      Caption = 'LAPORAN'
+      TabOrder = 18
+    end
   end
   object dbgrd1: TDBGrid
     Left = 40
@@ -356,10 +364,27 @@ object Form2: TForm2
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
   end
+  object btn7: TButton
+    Left = 912
+    Top = 64
+    Width = 105
+    Height = 41
+    Caption = 'NEXT'
+    TabOrder = 2
+    OnClick = btn7Click
+  end
+  object btn8: TButton
+    Left = 912
+    Top = 136
+    Width = 105
+    Height = 41
+    Caption = 'EXIT'
+    TabOrder = 3
+  end
   object ds1: TDataSource
     DataSet = zqry1
-    Left = 880
-    Top = 352
+    Left = 960
+    Top = 464
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -374,8 +399,8 @@ object Form2: TForm2
     LibraryLocation = 
       'D:\UNISKA\Semester 4\Visual 2\UAS_Muhammad Rizky Rinaldy_2110010' +
       '426\libmysql.dll'
-    Left = 888
-    Top = 136
+    Left = 952
+    Top = 416
   end
   object zqry1: TZQuery
     Connection = con1
@@ -383,7 +408,7 @@ object Form2: TForm2
     SQL.Strings = (
       'select * from data_siswa')
     Params = <>
-    Left = 856
-    Top = 224
+    Left = 952
+    Top = 368
   end
 end
