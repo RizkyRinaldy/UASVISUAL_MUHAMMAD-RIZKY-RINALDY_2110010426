@@ -13,22 +13,24 @@ type
     lbl1: TLabel;
     edt1: TEdit;
     edt2: TEdit;
-    cbb1: TComboBox;
     lbl2: TLabel;
     lbl3: TLabel;
     lbl4: TLabel;
     btn1: TButton;
-    btn2: TButton;
-    btn3: TButton;
-    btn4: TButton;
-    btn5: TButton;
     dbgrd1: TDBGrid;
     ds1: TDataSource;
     con1: TZConnection;
     zqry1: TZQuery;
+    btn2: TButton;
+    btn3: TButton;
+    btn4: TButton;
+    btn5: TButton;
+    edt3: TEdit;
     procedure posisiawal;
     procedure bersih;
     procedure btn1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,6 +38,7 @@ type
   end;
 
 var
+  id : string;
   Form5: TForm5;
 
 implementation
@@ -46,7 +49,7 @@ procedure TForm5.bersih;
 begin
  edt1.Clear;
  edt2.Clear;
- cbb1.Clear;
+ edt3.Clear;
 end;
 
 procedure TForm5.btn1Click(Sender: TObject);
@@ -58,7 +61,7 @@ begin
   btn5.Enabled := True;
   edt1.Enabled := True;
   edt2.Enabled := True;
-  cbb1.Enabled := True;
+  edt3.Enabled := True;
 end;
 
 procedure TForm5.posisiawal;
@@ -71,7 +74,44 @@ begin
   btn5.Enabled := False;
   edt1.Enabled := False;
   edt2.Enabled := False;
-  cbb1.Enabled := False;
+  edt3.Enabled := False;
 end;
+
+procedure TForm5.FormShow(Sender: TObject);
+begin
+posisiawal;
+end;
+
+
+procedure TForm5.btn2Click(Sender: TObject);
+begin
+if edt1.Text =''then
+begin
+  ShowMessage('NAMA POINT TIDAK BOLEH KOSONG');
+  end else
+if edt2.Text =''then
+begin
+  ShowMessage('TOTAL TIDAK BOLEH KOSONG');
+  end else
+if edt3.Text =''then
+begin
+  ShowMessage('KETERANGAN TIDAK BOLEH KOSONG');
+  end else
+begin
+  //simpan
+end;
+
+zqry1.SQL.Clear;
+zqry1.SQL.Add('insert into data_point values(null,"'+edt1.text+'","'+edt2.text+'","'+edt3.text+'")');
+zqry1.ExecSQL;
+
+zqry1.SQL.Clear;
+zqry1.SQL.Add('select * from data_point');
+zqry1.Open;
+ShowMessage('Data Berhasil Disimpan');
+posisiawal;
+end;
+
+
 
 end.
