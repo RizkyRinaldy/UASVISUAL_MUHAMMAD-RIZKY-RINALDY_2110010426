@@ -111,6 +111,7 @@ object Form5: TForm5
       Height = 41
       Caption = 'EDIT'
       TabOrder = 4
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 432
@@ -148,6 +149,7 @@ object Form5: TForm5
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object ds1: TDataSource
     DataSet = zqry1

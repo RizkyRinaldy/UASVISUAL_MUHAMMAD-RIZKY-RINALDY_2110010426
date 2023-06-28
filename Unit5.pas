@@ -31,6 +31,8 @@ type
     procedure btn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
+    procedure dbgrd1CellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -113,5 +115,42 @@ posisiawal;
 end;
 
 
+
+procedure TForm5.btn3Click(Sender: TObject);
+begin
+if (edt1.Text= '')or(edt2.Text= '')or(edt3.Text= '') then
+begin
+  ShowMessage('Inputan Wajib Di Isi');
+end else
+
+begin
+  ShowMessage('Data Berhasil Di Update');
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('Update data_point set nama_point="'+edt1.Text+'",total="'+edt2.Text+'",keterangan="'+edt3.Text+'" where id ="'+id+'"');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select*from data_point');
+  zqry1.Open;
+  posisiawal;
+  end;
+end;
+
+procedure TForm5.dbgrd1CellClick(Column: TColumn);
+begin
+  id:=zqry1.Fields[0].AsString;
+  edt1.Text := zqry1.FieldList[1].AsString;
+  edt2.Text := zqry1.FieldList[2].AsString;
+  edt3.Text := zqry1.FieldList[3].AsString;
+
+  btn1.Enabled := False;
+  btn2.Enabled := False;
+  btn3.Enabled := True;
+  btn4.Enabled := True;
+  btn5.Enabled := True;
+  edt1.Enabled := True;
+  edt2.Enabled := True;
+  edt3.Enabled := True;
+end;
 
 end.
