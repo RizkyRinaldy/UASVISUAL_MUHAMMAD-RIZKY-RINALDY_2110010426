@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 520
-  Top = 81
+  Left = 374
+  Top = 166
   Width = 1044
   Height = 571
   Caption = 'Form3'
@@ -238,6 +238,23 @@ object Form3: TForm3
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
+  end
+  object btn6: TButton
+    Left = 912
+    Top = 128
+    Width = 97
+    Height = 41
+    Caption = 'NEXT'
+    TabOrder = 2
+    OnClick = btn6Click
+  end
+  object btn7: TButton
+    Left = 920
+    Top = 192
+    Width = 97
+    Height = 41
+    Caption = 'BATAL'
+    TabOrder = 3
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

@@ -147,6 +147,7 @@ begin
 begin
   //simpan
 end;
+
 zqry1.SQL.Clear;
 zqry1.SQL.Add('insert into data_ortu values(null,"'+edt1.text+'","'+edt2.text+'","'+edt3.text+'","'+edt4.text+'","'+edt5.text+'","'+edt6.text+'","'+edt7.text+'")');
 zqry1.ExecSQL;

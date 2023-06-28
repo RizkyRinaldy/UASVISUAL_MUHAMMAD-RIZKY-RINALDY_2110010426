@@ -1,8 +1,8 @@
 object Form4: TForm4
-  Left = 282
-  Top = 174
+  Left = 289
+  Top = 203
   Width = 1044
-  Height = 540
+  Height = 541
   Caption = 'Form4'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,6 +11,7 @@ object Form4: TForm4
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -100,9 +101,9 @@ object Form4: TForm4
     object lbl7: TLabel
       Left = 368
       Top = 72
-      Width = 121
+      Width = 50
       Height = 19
-      Caption = 'TINGKAT KELAS'
+      Caption = 'KELAS'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -116,6 +117,19 @@ object Form4: TForm4
       Width = 67
       Height = 19
       Caption = 'JABATAN'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+    end
+    object lbl9: TLabel
+      Left = 368
+      Top = 152
+      Width = 88
+      Height = 19
+      Caption = 'NO TELPON'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -171,37 +185,31 @@ object Form4: TForm4
       TabOrder = 5
       Text = 'edt1'
     end
-    object edt7: TEdit
-      Left = 544
-      Top = 112
-      Width = 161
-      Height = 21
-      TabOrder = 6
-      Text = 'edt1'
-    end
     object btn1: TButton
       Left = 32
       Top = 200
       Width = 97
       Height = 41
       Caption = 'BARU'
-      TabOrder = 7
+      TabOrder = 6
+      OnClick = btn1Click
     end
     object btn2: TButton
       Left = 152
       Top = 200
       Width = 97
       Height = 41
-      Caption = 'EDIT'
-      TabOrder = 8
+      Caption = 'SIMPAN'
+      TabOrder = 7
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 272
       Top = 200
       Width = 97
       Height = 41
-      Caption = 'SIMPAN'
-      TabOrder = 9
+      Caption = 'EDIT'
+      TabOrder = 8
     end
     object btn4: TButton
       Left = 392
@@ -209,7 +217,7 @@ object Form4: TForm4
       Width = 97
       Height = 41
       Caption = 'HAPUS'
-      TabOrder = 10
+      TabOrder = 9
     end
     object btn5: TButton
       Left = 512
@@ -217,7 +225,23 @@ object Form4: TForm4
       Width = 97
       Height = 41
       Caption = 'BATAL'
+      TabOrder = 10
+    end
+    object edt7: TEdit
+      Left = 544
+      Top = 112
+      Width = 161
+      Height = 21
       TabOrder = 11
+      Text = 'edt1'
+    end
+    object edt8: TEdit
+      Left = 544
+      Top = 152
+      Width = 161
+      Height = 21
+      TabOrder = 12
+      Text = 'edt1'
     end
   end
   object dbgrd1: TDBGrid
@@ -225,11 +249,42 @@ object Form4: TForm4
     Top = 328
     Width = 777
     Height = 153
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 944
+    Top = 288
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 8111
+    Database = 'laporan_siswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 
+      'D:\UNISKA\Semester 4\Visual 2\UAS_Muhammad Rizky Rinaldy_2110010' +
+      '426\libmysql.dll'
+    Left = 920
+    Top = 184
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from data_walikelas')
+    Params = <>
+    Left = 920
+    Top = 248
   end
 end
