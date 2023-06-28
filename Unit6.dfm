@@ -1,6 +1,6 @@
 object Form6: TForm6
-  Left = 192
-  Top = 125
+  Left = 418
+  Top = 39
   Width = 1044
   Height = 540
   Caption = 'Form6'
@@ -218,6 +218,7 @@ object Form6: TForm6
       Height = 41
       Caption = 'SIMPAN'
       TabOrder = 9
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 288
