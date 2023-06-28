@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 277
-  Top = 80
+  Left = 430
+  Top = 181
   Width = 1044
   Height = 541
   Caption = 'Form4'
@@ -219,6 +219,7 @@ object Form4: TForm4
       Height = 41
       Caption = 'HAPUS'
       TabOrder = 9
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 512
@@ -258,6 +259,15 @@ object Form4: TForm4
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
+  end
+  object btn6: TButton
+    Left = 920
+    Top = 48
+    Width = 97
+    Height = 41
+    Caption = 'NEXT'
+    TabOrder = 2
+    OnClick = btn6Click
   end
   object ds1: TDataSource
     DataSet = zqry1

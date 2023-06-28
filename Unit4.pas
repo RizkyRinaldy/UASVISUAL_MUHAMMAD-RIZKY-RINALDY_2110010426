@@ -36,6 +36,7 @@ type
     con1: TZConnection;
     zqry1: TZQuery;
     edt8: TEdit;
+    btn6: TButton;
     procedure posisiawal;
     procedure bersih;
     procedure btn1Click(Sender: TObject);
@@ -43,6 +44,8 @@ type
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn4Click(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,6 +57,8 @@ var
   Form4: TForm4;
 
 implementation
+
+uses Unit5;
 
 {$R *.dfm}
 
@@ -203,6 +208,30 @@ edt8.Text := zqry1.FieldList[8].AsString;
   edt6.Enabled := True;
   edt7.Enabled := True;
   edt8.Enabled := True;
+end;
+
+procedure TForm4.btn4Click(Sender: TObject);
+begin
+if MessageDlg('Apakah Anda Yakin Menghapus Data Ini?',mtWarning,[mbYes,mbNo],0)= mryes then
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from data_walikelas where id ="'+id+'"');
+  zqry1.ExecSQL;
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from data_walikelas');
+  zqry1.Open;
+  ShowMessage('Data Berhasil Dihapus');
+  posisiawal;
+end else
+begin
+  ShowMessage('Data Batal Dihapus');
+  posisiawal;
+end;
+end;
+
+procedure TForm4.btn6Click(Sender: TObject);
+begin
+form5.show;
 end;
 
 end.
