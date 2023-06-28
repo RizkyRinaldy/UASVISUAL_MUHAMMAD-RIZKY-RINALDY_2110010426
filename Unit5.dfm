@@ -152,6 +152,15 @@ object Form5: TForm5
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
   end
+  object btn6: TButton
+    Left = 896
+    Top = 296
+    Width = 97
+    Height = 41
+    Caption = 'NEXT'
+    TabOrder = 2
+    OnClick = btn6Click
+  end
   object ds1: TDataSource
     DataSet = zqry1
     Left = 912

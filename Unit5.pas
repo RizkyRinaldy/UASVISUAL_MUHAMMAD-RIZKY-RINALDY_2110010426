@@ -26,6 +26,7 @@ type
     btn4: TButton;
     btn5: TButton;
     edt3: TEdit;
+    btn6: TButton;
     procedure posisiawal;
     procedure bersih;
     procedure btn1Click(Sender: TObject);
@@ -34,6 +35,7 @@ type
     procedure btn3Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn4Click(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,6 +47,8 @@ var
   Form5: TForm5;
 
 implementation
+
+uses Unit6;
 
 {$R *.dfm}
 
@@ -171,6 +175,11 @@ begin
   ShowMessage('Data Batal Dihapus');
   posisiawal;
 end;
+end;
+
+procedure TForm5.btn6Click(Sender: TObject);
+begin
+form6.show;
 end;
 
 end.
