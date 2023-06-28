@@ -1,6 +1,6 @@
 object Form6: TForm6
-  Left = 418
-  Top = 39
+  Left = 207
+  Top = 119
   Width = 1044
   Height = 540
   Caption = 'Form6'
@@ -227,6 +227,7 @@ object Form6: TForm6
       Height = 41
       Caption = 'EDIT'
       TabOrder = 10
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 416
@@ -257,6 +258,7 @@ object Form6: TForm6
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object ds1: TDataSource
     DataSet = zqry1
