@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Grids, DBGrids, StdCtrls, ComCtrls, ExtCtrls,
   ZAbstractConnection, ZConnection, DB, ZAbstractRODataset,
-  ZAbstractDataset, ZDataset;
+  ZAbstractDataset, ZDataset, frxClass, frxDBSet;
 
 type
   TForm2 = class(TForm)
@@ -53,6 +53,8 @@ type
     btn8: TButton;
     btn9: TButton;
     btn10: TButton;
+    frxdbdtst1: TfrxDBDataset;
+    frxrprt1: TfrxReport;
     procedure posisiawal;
     procedure bersih;
     procedure FormShow(Sender: TObject);
@@ -66,6 +68,7 @@ type
     procedure btn9Click(Sender: TObject);
     procedure btn10Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -324,6 +327,11 @@ end;
 procedure TForm2.btn5Click(Sender: TObject);
 begin
 bersih;
+end;
+
+procedure TForm2.btn6Click(Sender: TObject);
+begin
+frxrprt1.ShowReport();
 end;
 
 end.
