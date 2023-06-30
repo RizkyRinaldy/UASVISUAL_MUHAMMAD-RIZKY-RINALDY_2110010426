@@ -49,7 +49,10 @@ type
     dtp1: TDateTimePicker;
     btn6: TButton;
     btn7: TButton;
+    pnl2: TPanel;
     btn8: TButton;
+    btn9: TButton;
+    btn10: TButton;
     procedure posisiawal;
     procedure bersih;
     procedure FormShow(Sender: TObject);
@@ -59,6 +62,10 @@ type
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn4Click(Sender: TObject);
     procedure btn7Click(Sender: TObject);
+    procedure btn8Click(Sender: TObject);
+    procedure btn9Click(Sender: TObject);
+    procedure btn10Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -71,7 +78,7 @@ var
 
 implementation
 
-uses Unit3;
+uses Unit3, Unit1;
 
 {$R *.dfm}
 
@@ -297,6 +304,26 @@ end;
 procedure TForm2.btn7Click(Sender: TObject);
 begin
 form3.show;
+end;
+
+procedure TForm2.btn8Click(Sender: TObject);
+begin
+Form3.Show
+end;
+
+procedure TForm2.btn9Click(Sender: TObject);
+begin
+Form1.show;
+end;
+
+procedure TForm2.btn10Click(Sender: TObject);
+begin
+Form2.Close;
+end;
+
+procedure TForm2.btn5Click(Sender: TObject);
+begin
+bersih;
 end;
 
 end.

@@ -26,7 +26,10 @@ type
     btn4: TButton;
     btn5: TButton;
     edt3: TEdit;
+    pnl2: TPanel;
     btn6: TButton;
+    btn7: TButton;
+    btn8: TButton;
     procedure posisiawal;
     procedure bersih;
     procedure btn1Click(Sender: TObject);
@@ -36,6 +39,9 @@ type
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn4Click(Sender: TObject);
     procedure btn6Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
+    procedure btn7Click(Sender: TObject);
+    procedure btn8Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,7 +54,7 @@ var
 
 implementation
 
-uses Unit6;
+uses Unit6, Unit1;
 
 {$R *.dfm}
 
@@ -180,6 +186,21 @@ end;
 procedure TForm5.btn6Click(Sender: TObject);
 begin
 form6.show;
+end;
+
+procedure TForm5.btn5Click(Sender: TObject);
+begin
+bersih;
+end;
+
+procedure TForm5.btn7Click(Sender: TObject);
+begin
+form1.show;
+end;
+
+procedure TForm5.btn8Click(Sender: TObject);
+begin
+form5.Close;
 end;
 
 end.

@@ -317,6 +317,7 @@ object Form2: TForm2
       Height = 41
       Caption = 'BATAL'
       TabOrder = 14
+      OnClick = btn5Click
     end
     object edt11: TEdit
       Left = 520
@@ -365,26 +366,52 @@ object Form2: TForm2
     OnCellClick = dbgrd1CellClick
   end
   object btn7: TButton
-    Left = 912
-    Top = 64
+    Left = 840
+    Top = 376
     Width = 105
     Height = 41
     Caption = 'NEXT'
     TabOrder = 2
     OnClick = btn7Click
   end
-  object btn8: TButton
-    Left = 912
-    Top = 136
-    Width = 105
-    Height = 41
-    Caption = 'EXIT'
+  object pnl2: TPanel
+    Left = 824
+    Top = 376
+    Width = 161
+    Height = 169
     TabOrder = 3
+    object btn8: TButton
+      Left = 16
+      Top = 8
+      Width = 129
+      Height = 41
+      Caption = 'NEXT'
+      TabOrder = 0
+      OnClick = btn8Click
+    end
+    object btn9: TButton
+      Left = 16
+      Top = 56
+      Width = 129
+      Height = 41
+      Caption = 'BACK MENU'
+      TabOrder = 1
+      OnClick = btn9Click
+    end
+    object btn10: TButton
+      Left = 16
+      Top = 104
+      Width = 129
+      Height = 41
+      Caption = 'EXIT'
+      TabOrder = 2
+      OnClick = btn10Click
+    end
   end
   object ds1: TDataSource
     DataSet = zqry1
     Left = 960
-    Top = 464
+    Top = 256
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -399,8 +426,8 @@ object Form2: TForm2
     LibraryLocation = 
       'D:\UNISKA\Semester 4\Visual 2\UAS_Muhammad Rizky Rinaldy_2110010' +
       '426\libmysql.dll'
-    Left = 952
-    Top = 416
+    Left = 968
+    Top = 208
   end
   object zqry1: TZQuery
     Connection = con1
@@ -408,7 +435,7 @@ object Form2: TForm2
     SQL.Strings = (
       'select * from data_siswa')
     Params = <>
-    Left = 952
-    Top = 368
+    Left = 920
+    Top = 208
   end
 end

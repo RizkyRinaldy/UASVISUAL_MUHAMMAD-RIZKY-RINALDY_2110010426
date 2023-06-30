@@ -36,7 +36,10 @@ type
     con1: TZConnection;
     zqry1: TZQuery;
     edt8: TEdit;
+    pnl2: TPanel;
     btn6: TButton;
+    btn7: TButton;
+    btn8: TButton;
     procedure posisiawal;
     procedure bersih;
     procedure btn1Click(Sender: TObject);
@@ -46,6 +49,9 @@ type
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn4Click(Sender: TObject);
     procedure btn6Click(Sender: TObject);
+    procedure btn7Click(Sender: TObject);
+    procedure btn8Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -58,7 +64,7 @@ var
 
 implementation
 
-uses Unit5;
+uses Unit5, Unit1;
 
 {$R *.dfm}
 
@@ -232,6 +238,21 @@ end;
 procedure TForm4.btn6Click(Sender: TObject);
 begin
 form5.show;
+end;
+
+procedure TForm4.btn7Click(Sender: TObject);
+begin
+form1.show;
+end;
+
+procedure TForm4.btn8Click(Sender: TObject);
+begin
+Form4.Close;
+end;
+
+procedure TForm4.btn5Click(Sender: TObject);
+begin
+bersih;
 end;
 
 end.

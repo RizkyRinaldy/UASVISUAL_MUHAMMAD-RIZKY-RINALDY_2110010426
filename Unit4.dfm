@@ -15,7 +15,7 @@ object Form4: TForm4
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 384
+    Left = 336
     Top = 24
     Width = 161
     Height = 21
@@ -28,8 +28,8 @@ object Form4: TForm4
     ParentFont = False
   end
   object pnl1: TPanel
-    Left = 112
-    Top = 64
+    Left = 64
+    Top = 56
     Width = 777
     Height = 249
     TabOrder = 0
@@ -228,6 +228,7 @@ object Form4: TForm4
       Height = 41
       Caption = 'BATAL'
       TabOrder = 10
+      OnClick = btn5Click
     end
     object edt7: TEdit
       Left = 544
@@ -247,8 +248,8 @@ object Form4: TForm4
     end
   end
   object dbgrd1: TDBGrid
-    Left = 112
-    Top = 328
+    Left = 64
+    Top = 320
     Width = 777
     Height = 153
     DataSource = ds1
@@ -260,19 +261,44 @@ object Form4: TForm4
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
   end
-  object btn6: TButton
-    Left = 920
-    Top = 48
-    Width = 97
-    Height = 41
-    Caption = 'NEXT'
+  object pnl2: TPanel
+    Left = 872
+    Top = 328
+    Width = 137
+    Height = 153
     TabOrder = 2
-    OnClick = btn6Click
+    object btn6: TButton
+      Left = 16
+      Top = 8
+      Width = 105
+      Height = 41
+      Caption = 'NEXT'
+      TabOrder = 0
+      OnClick = btn6Click
+    end
+    object btn7: TButton
+      Left = 16
+      Top = 56
+      Width = 105
+      Height = 41
+      Caption = 'BACK MENU'
+      TabOrder = 1
+      OnClick = btn7Click
+    end
+    object btn8: TButton
+      Left = 16
+      Top = 104
+      Width = 105
+      Height = 41
+      Caption = 'EXIT'
+      TabOrder = 2
+      OnClick = btn8Click
+    end
   end
   object ds1: TDataSource
     DataSet = zqry1
-    Left = 944
-    Top = 288
+    Left = 864
+    Top = 192
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -296,7 +322,7 @@ object Form4: TForm4
     SQL.Strings = (
       'select * from data_walikelas')
     Params = <>
-    Left = 920
+    Left = 888
     Top = 248
   end
 end

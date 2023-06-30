@@ -15,7 +15,7 @@ object Form6: TForm6
   PixelsPerInch = 96
   TextHeight = 13
   object lbl9: TLabel
-    Left = 424
+    Left = 360
     Top = 8
     Width = 206
     Height = 23
@@ -28,7 +28,7 @@ object Form6: TForm6
     ParentFont = False
   end
   object pnl1: TPanel
-    Left = 72
+    Left = 32
     Top = 48
     Width = 841
     Height = 265
@@ -245,10 +245,11 @@ object Form6: TForm6
       Height = 41
       Caption = 'BATAL'
       TabOrder = 12
+      OnClick = btn5Click
     end
   end
   object dbgrd1: TDBGrid
-    Left = 72
+    Left = 32
     Top = 328
     Width = 841
     Height = 153
@@ -260,6 +261,31 @@ object Form6: TForm6
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
+  end
+  object pnl2: TPanel
+    Left = 888
+    Top = 336
+    Width = 137
+    Height = 137
+    TabOrder = 2
+    object btn6: TButton
+      Left = 16
+      Top = 8
+      Width = 105
+      Height = 41
+      Caption = 'BACK MENU'
+      TabOrder = 0
+      OnClick = btn6Click
+    end
+    object btn7: TButton
+      Left = 16
+      Top = 72
+      Width = 105
+      Height = 41
+      Caption = 'EXIT'
+      TabOrder = 1
+      OnClick = btn7Click
+    end
   end
   object ds1: TDataSource
     DataSet = zqry1

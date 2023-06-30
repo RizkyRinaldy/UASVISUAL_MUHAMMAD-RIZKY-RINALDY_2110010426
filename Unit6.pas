@@ -37,6 +37,9 @@ type
     con1: TZConnection;
     zqry1: TZQuery;
     lbl9: TLabel;
+    pnl2: TPanel;
+    btn6: TButton;
+    btn7: TButton;
     procedure posisiawal;
     procedure bersih;
     procedure btn1Click(Sender: TObject);
@@ -45,6 +48,9 @@ type
     procedure btn3Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn4Click(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
+    procedure btn7Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,6 +62,8 @@ var
   Form6: TForm6;
 
 implementation
+
+uses Unit1;
 
 {$R *.dfm}
 
@@ -221,6 +229,21 @@ begin
   ShowMessage('Data Batal Dihapus');
   posisiawal;
 end;
+end;
+
+procedure TForm6.btn6Click(Sender: TObject);
+begin
+form1.show;
+end;
+
+procedure TForm6.btn7Click(Sender: TObject);
+begin
+form6.Close;
+end;
+
+procedure TForm6.btn5Click(Sender: TObject);
+begin
+bersih;
 end;
 
 end.

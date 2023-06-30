@@ -15,7 +15,7 @@ object Form5: TForm5
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 344
+    Left = 256
     Top = 24
     Width = 365
     Height = 23
@@ -28,7 +28,7 @@ object Form5: TForm5
     ParentFont = False
   end
   object pnl1: TPanel
-    Left = 192
+    Left = 104
     Top = 72
     Width = 689
     Height = 233
@@ -129,6 +129,7 @@ object Form5: TForm5
       Height = 41
       Caption = 'BATAL'
       TabOrder = 6
+      OnClick = btn5Click
     end
     object edt3: TEdit
       Left = 208
@@ -139,8 +140,8 @@ object Form5: TForm5
     end
   end
   object dbgrd1: TDBGrid
-    Left = 192
-    Top = 320
+    Left = 104
+    Top = 312
     Width = 689
     Height = 169
     DataSource = ds1
@@ -152,14 +153,39 @@ object Form5: TForm5
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
   end
-  object btn6: TButton
-    Left = 896
-    Top = 296
-    Width = 97
-    Height = 41
-    Caption = 'NEXT'
+  object pnl2: TPanel
+    Left = 816
+    Top = 320
+    Width = 161
+    Height = 161
     TabOrder = 2
-    OnClick = btn6Click
+    object btn6: TButton
+      Left = 24
+      Top = 16
+      Width = 113
+      Height = 41
+      Caption = 'NEXT'
+      TabOrder = 0
+      OnClick = btn6Click
+    end
+    object btn7: TButton
+      Left = 24
+      Top = 64
+      Width = 113
+      Height = 41
+      Caption = 'BACK MENU'
+      TabOrder = 1
+      OnClick = btn7Click
+    end
+    object btn8: TButton
+      Left = 24
+      Top = 112
+      Width = 113
+      Height = 41
+      Caption = 'EXIT'
+      TabOrder = 2
+      OnClick = btn8Click
+    end
   end
   object ds1: TDataSource
     DataSet = zqry1

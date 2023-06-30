@@ -223,6 +223,7 @@ object Form3: TForm3
       Height = 41
       Caption = 'BATAL'
       TabOrder = 11
+      OnClick = btn5Click
     end
   end
   object dbgrd1: TDBGrid
@@ -239,22 +240,39 @@ object Form3: TForm3
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
   end
-  object btn6: TButton
-    Left = 912
-    Top = 128
-    Width = 97
-    Height = 41
-    Caption = 'NEXT'
+  object pnl2: TPanel
+    Left = 840
+    Top = 344
+    Width = 137
+    Height = 161
     TabOrder = 2
-    OnClick = btn6Click
-  end
-  object btn7: TButton
-    Left = 920
-    Top = 192
-    Width = 97
-    Height = 41
-    Caption = 'BATAL'
-    TabOrder = 3
+    object btn6: TButton
+      Left = 16
+      Top = 8
+      Width = 105
+      Height = 41
+      Caption = 'NEXT'
+      TabOrder = 0
+      OnClick = btn6Click
+    end
+    object btn7: TButton
+      Left = 16
+      Top = 56
+      Width = 105
+      Height = 41
+      Caption = 'BACK MENU'
+      TabOrder = 1
+      OnClick = btn7Click
+    end
+    object btn8: TButton
+      Left = 16
+      Top = 104
+      Width = 105
+      Height = 41
+      Caption = 'EXIT'
+      TabOrder = 2
+      OnClick = btn8Click
+    end
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
